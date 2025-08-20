@@ -74,6 +74,18 @@ python inference.py \
 ```
 Other config files and corresponding checkpoints can be found in [configs](configs) folder and our [huggingface repo](https://huggingface.co/gdhe17/Self-Forcing/tree/main/checkpoints).
 
+## Docker
+
+To build a container capable of running Self-Forcing, use the following code.
+```
+docker build . --tag self-forcing
+```
+
+Then run it with:
+```
+docker run -it --rm -v $PWD:/self-forcing -p 5001:5001 --gpus all self-forcing python3 demo.py
+```
+
 ## Training
 ### Download text prompts and ODE initialized checkpoint
 ```
