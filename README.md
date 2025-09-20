@@ -86,6 +86,14 @@ Then run it with:
 docker run -it --rm -v $PWD:/self-forcing -p 5001:5001 --gpus all self-forcing python3 demo.py
 ```
 
+### Full image
+
+There is also a version of the image that contains the repository and model files necessary, meaning you can run it OOTB.
+
+```
+docker run -it -p 5001:5001 --gpus all atmaranto/self-forcing:full python3 demo.py
+```
+
 ## Training
 ### Download text prompts and ODE initialized checkpoint
 ```
